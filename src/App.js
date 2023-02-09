@@ -22,7 +22,6 @@ function App() {
         </Container>
       </Navbar>
 
-      <div className='main-bg'></div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/items" element={<Items />} />
@@ -43,10 +42,10 @@ function Home() {
   return (
     <>
     
-    <Carousel activeIndex={index} onSelect={handleSelect} className="m-5">
+    <Carousel activeIndex={index} onSelect={handleSelect} className="">
       <Carousel.Item>
         <img
-          className="d-block w-100 rounded-5"
+          className="d-block w-100"
           src={require("./img/sale1.jpg")}
           alt="First slide"
         />
@@ -57,7 +56,7 @@ function Home() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 rounded-5"
+          className="d-block w-100"
           src={require("./img/sale2.jpg")}
           alt="Second slide"
         />
@@ -69,7 +68,7 @@ function Home() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 rounded-5"
+          className="d-block w-100"
           src={require("./img/sale3.jpg")}
           alt="Third slide"
         />
@@ -95,7 +94,7 @@ function Items() {
       <Row className='my-4' >
         {data.map(d => (
           <Col key={d.id} className='my-2'>
-            <Card className='mx-auto' style={{ width: '17rem' }}>
+            <Card className='mx-auto' style={{ width: '19rem' }}>
               <Card.Img className='p-3' variant="top" src={require(`${d.pic}`)} style={{ height: "200px", objectFit: "contain" }} />
               <Card.Body>
                 <Card.Title className='text-truncate'>{d.title}</Card.Title>
